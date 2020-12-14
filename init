@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script load zfs kernel module for any archiso.
+# This script load zfs kernel module for any miso.
 # github.com/eoli3n
 # Thanks to CalimeroTeknik on #archlinux-fr, FFY00 on #archlinux-projects, JohnDoe2 on #regex
 
@@ -119,13 +119,13 @@ download_package () {
 
 ### Main
 
-print "Testing if archiso is running"
+print "Testing if miso is running"
 
-grep archiso /proc/cmdline >/dev/null
+grep miso /proc/cmdline >/dev/null
 
 print "Increasing cowspace to half of RAM"
 
-mount -o remount,size=50% /run/archiso/cowspace
+mount -o remount,size=50% /run/miso/cowspace
 
 # Init archzfs repository
 init_archzfs
